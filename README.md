@@ -23,8 +23,18 @@ In this challenge, you are to build the Smurfs village once again, only this tim
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+Actions contain an action type and data (payload) that are dispatched to our reducer. The reducer changes state based on what was send from action. Reducer is where we update state in redux. The store is where we connect our components to so they can access the global state. Store is the single source of truth because it connects all components to it and only way to change is through actions and reducers... all componenets will have same state.
+
 - [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
+
+App state is held in Store (redux) and same for all components, whereas component state is within a class in a component and is updated within a component. App state in redux is great for large scale applications that have lots of state and makes managing it easier. Comp state is better for small apps. 
+
+
 - [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+
+In redux, reducers are synch by default. If we need asynch we need to use thunk which is a middleware which allows our flow to be asynch so we can make api calls through action creators. If we didnt, we would "freeze" our app while waiting for data on the api request. By making them async we can load other data while waiting.
+
 
 ## Project Set Up
 

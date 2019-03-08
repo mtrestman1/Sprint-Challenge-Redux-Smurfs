@@ -38,6 +38,7 @@ class SmurfForm extends React.Component {
         <div>
             <form >
                 <input 
+                
                 onChange={this.handleChanges}
                 value={this.state.name}
                 placeholder='name'
@@ -53,6 +54,7 @@ class SmurfForm extends React.Component {
                 type='text'
                 />
                 <input 
+                
                 onChange={this.handleChanges}
                 value={this.state.height}
                 placeholder='height'
